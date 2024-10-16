@@ -3,7 +3,7 @@ import "./Login.css";
 import logo from "../../assets/logo.png";
 
 const Login = () => {
-  const [signState, seSignState] = useState("Sign In");
+  const [signState, setSignState] = useState("Sign In");
 
   return (
     <div className="login">
@@ -31,12 +31,12 @@ const Login = () => {
           {signState === "Sign Up" ? (
             <p>
               Already have account?{" "}
-              <span onClick={() => seSignState("Sign In")}>Sign In Now</span>
+              <span onClick={() => setSignState("Sign In")}>Sign In Now</span>
             </p>
           ) : (
             <p>
               New to Netflix?{" "}
-              <span onClick={() => seSignState("Sign Up")}>Sign Up Now</span>
+              <span onClick={() => setSignState("Sign Up")}>Sign Up Now</span>
             </p>
           )}
         </div>
