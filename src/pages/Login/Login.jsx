@@ -30,11 +30,13 @@ const Login = () => {
         <div className="form-switch">
           {signState === "Sign Up" ? (
             <p>
-              Already have account? <span onClick={() => seSignState("Sign In")}>Sign In Now</span>
+              Already have account?{" "}
+              <span onClick={() => seSignState("Sign In")}>Sign In Now</span>
             </p>
           ) : (
             <p>
-              New to Netflix? <span onClick={() => seSignState("Sign Up")}>Sign Up Now</span>
+              New to Netflix?{" "}
+              <span onClick={() => seSignState("Sign Up")}>Sign Up Now</span>
             </p>
           )}
         </div>
