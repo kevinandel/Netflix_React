@@ -4,14 +4,15 @@ import "./TitleCards.css";
 const TitleCards = ({ title, category }) => {
   const [apiData, setApiData] = useState([]);
 
+  const apiKey = import.meta.env.VITE_TMDB_API_KEY;
+
   const cardsRef = useRef();
 
   const options = {
     method: "GET",
     headers: {
       accept: "application/json",
-      Authorization:
-        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhZDY3YjdmOWQ3ZTQ0MTU0M2FhZjY1ZTRkMjZmYjJhMyIsIm5iZiI6MTcyOTA2MzQwNS41ODM3NTUsInN1YiI6IjY3MGY2NDU2MDQzMzFkYjRiMTEyNmQ0ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.hhPvyVuJ_WwXDzzMC2cDYmzf8wGFniceMUlk83kPzmg",
+      Authorization: `Bearer ${apiKey}`,
     },
   };
 
